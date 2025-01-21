@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+
+   
+       <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #quote-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #quote-text {
+            font-size: 20px;
+            font-style: italic;
+            color: #333;
+        }
+
+        #author {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        #date {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        #next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #next-button:hover {
+            background-color: #2980b9;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+
+    </style>
+
+<div class="navbar">
+  <a href="index.html">HOME</a>
+  <a href="prizes.html">PRIZES</a>
+  <a href="winners.html">WINNER</a>
+  <a href="schedule.html">SCHEDULE</a>
+  <a href="diet plans.html">DIET PLANS</a>
+  <a href="books.html">BOOKS</a>
+  <a href="workout.html">WORKOUT</a>
+  <a href="water intake.html">WATER</a>
+
+</div>
+
+<h1>The video autoplay attribute</h1>
+<video width="1500" height="700" autoplay="10" >
+  <source src="assets/video/Irade kar buland full song _ Commando 3 first song _ Vidyut Zammwal, Adha sh......mp4"  type="video/mp4" >
+  Your browser does not support the video tag.
+</video>
+<br>
+<Br>
+ <br>
+
+<div id="quote-container">
+  <div id="quote-text">"Your quote for the day will appear here."</div>
+  <div id="author">— Author</div>
+  <div id="date"></div>
+  <button id="next-button" onclick="generateQuote()">Next Quote</button>
+</div>
+
+
+<script>
+  const quotes = [
+      { text: "Your motivational quote.", author: "DAY 1"},
+      { text: "When you forgive you win.", author: "DAY 2" },
+      { text: "Forgiveness is the power to choose how things affect you.", author: "DAY 3" },
+      { text: "Forgiveness is choosing to be happy", author: "DAY 4" },
+      { text: "Forgiveness is simply freeing ourselves from wanting to punish..", author: "DAY 5" },
+      { text: "We experience what we intend for others.", author: "DAY 6" },
+      { text: "Fear is wisdom as a child.", author: "DAY 7" },
+      { text: "Forgiveness is always possible, but reconciliation is not always possible.", author: "DAY 8" },
+      { text: "Forgiveness gives us the freedom to stay and the freedom to walk away.", author: "DAY 9" },
+      { text: "“We cannot solve problems with the kind of thinking we employed when we came up with them..", author: "DAY 10" },
+      { text: "Learn as if you will live forever, live like you will die tomorrow.", author: "DAY 11" }, 
+      { text: "Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.", author: "DAY 12" }, 
+      { text: "When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.", author: "DAY 13" },
+      { text: "When you change your thoughts, remember to also change your world.", author: "DAY 14" },
+      { text: "It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.", author: "DAY 15" },
+      { text: "Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.", author: "DAY 16" },
+      { text: "Success is not final; failure is not fatal: It is the courage to continue that counts.", author: "DAY 17" },
+      { text: "It is better to fail in originality than to succeed in imitation.",author: "DAY 18" },
+      { text: "The road to success and the road to failure are almost exactly the sam.", author: "DAY 19" },
+      { text: "Success usually comes to those who are too busy looking for it.", author: "DAY 20" },
+     { text: "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.", author: "DAY 21" },
+      { text: "Don’t let yesterday take up too much of today.", author: "DAY 22" },
+      { text: "You learn more from failure than from success. Don’t let it stop you. Failure builds character..", author: "DAY 23" },
+      { text: "If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.", author: "DAY 24" },
+      { text: "Experience is a hard teacher because she gives the test first, the lesson afterwards.", author: "DAY 25" },
+      { text: "To know how much there is to know is the beginning of learning to live.", author: "DAY 26" },
+      { text: "Goal setting is the secret to a compelling future.", author: "DAY 27" },
+      { text: "Concentrate all your thoughts upon the work in hand. The sun's rays do not burn until brought to a focus.", author: "DAY 28" },
+      { text: "I’m a greater believer in luck, and I find the harder I work the more I have of it.", author: "DAY 29" },
+      { text: "When we strive to become better than we are, everything around us becomes better too.", author: "DAY 30" },
+     // Add more quotes for each day
+  ];
+
+  let currentQuoteIndex = 0;
+
+  function generateQuote() {
+      const quoteContainer = document.getElementById('quote-container');
+      const quoteText = document.getElementById('quote-text');
+      const author = document.getElementById('author');
+      const date = document.getElementById('date');
+
+      const quote = quotes[currentQuoteIndex];
+      quoteText.textContent = `"${quote.text}"`;
+      author.textContent = `— ${quote.author}`;
+      date.textContent = new Date().toDateString();
+
+      currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+  }
+
+  // Display the initial quote on page load
+  generateQuote();
+</script>
+</body>
+</html>

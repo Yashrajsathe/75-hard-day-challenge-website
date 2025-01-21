@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<style>
+    .index-page .header {
+  --background-color: rgba(255, 255, 255, 0);
+  --secondary-color: #ffffff;
+  --nav-color: rgba(255, 255, 255, 0.515);
+  --nav-hover-color: #ffffff;
+}
+
+/* Home Page Custom Header on page scroll
+------------------------------*/
+.index-page.scrolled .header {
+  --background-color: #ffffff;
+  --secondary-color: #444444;
+  --nav-color: #444444;
+  --nav-hover-color: #d83535;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+    background-color: black;
+    height: 50px;
+    width: 1470px;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+}
+</style>
+<body>
+    
+</body>
+<nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="index.html#hero" class="active"></a></li>
+      <li><a href="prizes.html"></a></li>
+      <li><a href="winners.html"></a></li>
+      <li><a href="schedule.html"></a></li>
+      <li><a href="diet plans.html"></a></li>
+      <li><a href="books.html"></a></li>
+      <li><a href="workout.html"></a></li>
+      <li><a href="water intake.html"></a></li>
+      </li>
+      <li><a href="contact.html"></a></li>
+    </ul>
+
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  </nav><!-- End Nav Menu -->
+
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">user no.1</h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">welcome YASHRAJ SATHE</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+<br><br>
+            Are you ready to transform your life? This is not just a fitness program, it's a test of mental and physical fortitude. Over the next 75 days, you'll push your limits, break through barriers, and discover the extraordinary strength within you.
+            <br><br>
+            Remember, it's not about perfection, it's about progress. Each day is a step towards a better you. So, let's get started on this incredible journey. Together, we can conquer the 75 Hard Days Challenge!
+            <br><br>
+            Stay strong, stay committed, and let's make these 75 days count!</p>
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+            <button>next</button>
+            <a href=""
+      </div>
+      
+</html>
